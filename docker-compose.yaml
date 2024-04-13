@@ -1,0 +1,67 @@
+# version: "3.9"
+
+services:
+
+  database:
+    container_name: database
+    image: database:v1.0
+    # healthcheck:
+    #   test: mysqladmin ping -h localhost -P 3306 -u $DB_ADMIN_USER -p$DB_ADMIN_PASSWORD || exit 1
+    #   start_period: 30s
+    #   interval: 10s
+    #   timeout: 3s
+    #   retries: 5
+    networks:
+        - transcendence
+    build: database
+    env_file: .env
+    # volumes:
+    #     - ./database/data:/var/lib/postgresql/data
+    restart: unless-stopped
+    ports:
+        - "5432:5432"
+    init: true
+
+  front:
+    container_name: front
+    image: front:v1.0
+    networks:
+        - transcendence
+    build: front
+    env_file: .env
+    restart: unless-stopped
+    ports:
+      - "3000:443"
+    volumes:
+      - "./front/app:/app"
+    init: true
+
+  back:
+    container_name: back
+    image: back:v1.0
+    networks:
+        - transcendence
+    build: back
+    env_file: .env
+    restart: unless-stopped
+    expose:
+      - "8000"
+    volumes:
+      - "./back/app:/app"
+    init: true
+
+  proxy:
+    container_name: proxy
+    image: proxy:v1.0
+    networks:
+        - transcendence
+    build: proxy
+    env_file: .env
+    restart: unless-stopped
+    ports:
+      - "4241:4241"
+    init: true
+
+networks:
+  transcendence:
+      driver: bridge

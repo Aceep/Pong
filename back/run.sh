@@ -1,0 +1,1 @@
+docker run -it --rm --name test-back -p 8000:8000 test-back

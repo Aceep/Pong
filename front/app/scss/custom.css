@@ -1,0 +1,173 @@
+html,
+body {
+  height: 100%;
+  background-image: url("../ressources/bg.svg");
+  background-position: top;
+  background-size: 100vw auto;
+}
+
+.form-signin {
+  max-width: 370px;
+  min-width: 300px;
+  padding: 2rem;
+  background-color: #FEFEFA;
+  border-radius: 3%;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+  }
+  
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.form-signin #register_password_input {
+	margin-bottom: 0px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0.375rem;
+	border-top-right-radius: 0.375rem;
+}
+
+.form-signin #register_username_input {
+	margin-bottom: 10px;
+	border-bottom-right-radius: 0.375rem;
+	border-bottom-left-radius: 0.375rem;
+}
+
+#profile_container {
+	max-width: 1650px;
+	--bs-gutter-x: 1.5rem;
+	--bs-gutter-y: 0;
+	width: 100%;
+	height: 100%;
+	padding-right: calc(var(--bs-gutter-x) * .5);
+	padding-left: calc(var(--bs-gutter-x) * .5);
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 0.5rem;
+}
+
+#profile_info {
+	height: 80%;
+}
+
+#profile_avatar {
+	width: 8vw;
+	min-width: 70px;
+	height: 8vw;
+	min-height: 70px;
+	border-radius: 50%;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	display: flex;
+	justify-content: center;
+}
+
+.card {
+	height: 100% !important;
+	padding: 10px;
+	margin-bottom: 0;
+}
+
+.game-title,
+.scoreboard {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.game-container {
+	height: 450px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.player-info {
+	background-color: #ffffffbd;
+	color: rgb(0, 0, 0);
+	padding: 10px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	font-size: large;
+	justify-content: center;
+	width: 400px;
+	margin : 0 auto;
+}
+.player-info img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.player2-info {
+	background-color: #ffffffbd;
+	color: rgb(0, 0, 0);
+	padding: 10px;
+	border-radius: 5px;
+	display: flex;
+	align-items: right;
+	text-align: right;
+	justify-content: center;
+	width: 400px;
+	font-size: large;
+	margin : 0 auto;
+}
+
+.player2-info img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-left: 10px;
+}
+
+.game-title {
+	background-color: #ffffffbd;
+	height : 100px;
+	color: rgb(0, 0, 0);
+	padding: 20px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	margin-top: 70px;
+	margin-bottom: 60px;
+}
+
+.game-title h1 {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.game-title img {
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.scoreboard {
+	background-color: #ffffffbd;
+	color: #343a40;
+	padding: 20px;
+	height:	120px ;
+	border-radius: 5px;
+	text-align: center;
+	margin-top: 20px;
+	margin: 0 auto; /* Centering the scoreboard */
+}
+.scoreboard p {
+	font-size: 24px;
+}
+.score {
+	font-size: 36px;
+	font-weight: bold;
+}
